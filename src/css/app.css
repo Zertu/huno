@@ -1,0 +1,77 @@
+body {
+  overflow: hidden
+}
+
+.infos {
+  width: 400px;
+  height: 180px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.infos-child {
+  height: 60px;
+  text-align: center;
+  font-size: 30px;
+  color: #666666;
+  line-height: 1.6
+}
+
+.division {
+  height: 0;
+  width: 75%;
+  border-top: 1px solid #6699CC;
+  
+  margin:  auto
+}
+
+.division-first {
+  width: 50%;
+}
+.infos-child-first{
+    font-size: 24px;
+    line-height: 2.4;
+
+}
+.infos-child-second{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    margin:10px auto
+}
+.infos-child-second div{
+    display: flex;
+}
+.infos-child-second a{
+    color: #666666;
+    transition: all 0.3s 
+}
+.infos-child-second a:hover{
+    color: white;
+    transition: all 0.3s 
+}
+.infos-child-second div a{
+    border-radius: 20px ;
+    border: 1px solid ;
+    width: 50px;
+    margin-left: 10px;
+    display: block;
+}
+.infos-child-second div span:nth-of-type(1) a{
+        margin-left: 0;
+}
+
+.infos-child-second>span a{
+    display: block;
+    width: 30px;
+    border:1px solid ;
+    border-radius: 20px;
+    margin-left: 10px;
+}
