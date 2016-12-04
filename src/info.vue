@@ -12,7 +12,7 @@
       <div class="infos-child infos-child-second">
           <div>
               
-        <span><a href='/'>首页</a></span>
+        <span><a href='/home'>首页</a></span>
         <span><a href='/about'>关于</a></span>
         <span> <a href='/archive'>归档</a></span>
         
