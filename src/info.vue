@@ -13,7 +13,7 @@
           <div>
               
         <span><a href='/home'>首页</a></span>
-        <span><a href='/about'>关于</a></span>
+        <span><<router-link to="/about">关于</router-link></span>
         <span> <a href='/archive'>归档</a></span>
         
           </div>
@@ -23,10 +23,11 @@
   </div>
 </template>
 <script>
-
+import VueRouter from "vue-router";
 export default {
   name: 'info',
   components: {
+    about
   }
 }   
 </script>

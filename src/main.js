@@ -10,16 +10,15 @@ Vue.use(VueRouter)
 const router = new VueRouter({
   mode: 'history',
   base: __dirname,
-  routes: [{
-    path: '/',
-    components: {
-      default: info
-    }
-  }, {
+  routes:  {
     path: '/about',
     component: about
-  }]
+  }
 })
+new Vue({
+  router: router
+}).$mount('#about')
+
 new Vue({
   el: '#app',
   render: h => h('app'),
@@ -36,10 +35,3 @@ new Vue({
   }
 }).$mount('#info')
 
-new Vue({
-  router: router,
-  render: h => h('about'),
-  components: {
-    about
-  }
-}).$mount('#about')
