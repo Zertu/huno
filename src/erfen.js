@@ -1,13 +1,17 @@
-let rank = (key, arr) => {
-    let mid = arr.length / 2;
-    if (key < arr[mid]) {
-        return rank(key, arr.splice(mid, mid));
+let rank = (key, arr, start = 0, end = arr.length) => {
+    let mid = Math.floor((start + end) / 2);
+    console.log(mid);
+    console.log(start + '                      ' + end);
+    if (key < arr[mid - 1]) {
+        return rank(key, arr, start, mid);
     }
-    else if (key > arr[mid]) {
-        return rank(key, arr.splice(0, mid));
+    else if (key > arr[mid - 1]) {
+        return rank(key, arr, mid, end);
     }
     else {
-        return mid;
+        return mid - 1;
     }
 };
-//# sourceMappingURL=erfen.js.map
+function sort(arr) {
+    return arr.sort((a, b) => { return a - b; });
+}
