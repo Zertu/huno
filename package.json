@@ -4,12 +4,11 @@
   "description": "y",
   "author": "y",
   "private": true,
-  "scripts": {
-  },
+  "scripts": {},
   "dependencies": {
+    "@tyriar/avl-tree": "^1.0.0"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "engines": {
     "node": ">= 4.0.0",
     "npm": ">= 3.0.0"

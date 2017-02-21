@@ -17,8 +17,8 @@ function climbStairs(n) {
     }
 }
 function fib3(n) {
-    let x = 0, z = 1, w;
-    for (let j = 0; j < n; j++) {
+    var x = 0, z = 1, w;
+    for (var j = 0; j < n; j++) {
         w = z;
         z = x + z;
         x = w;
