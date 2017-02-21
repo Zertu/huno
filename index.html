@@ -3,12 +3,54 @@
   <head>
     <meta charset="utf-8">
     <title>算法练习</title>
+    <style>
+     .box{
+       display: flex;
+       flex-direction: row;
+       position: absolute;
+       top: 0;
+       left: 0;
+       bottom: 0;
+       right: 0;
+       margin: auto;
+       width: 400px;
+       height: 400px;
+       flex-wrap: wrap;
+       background: coral;
+     }
+     .box div{
+       width: 100px;
+       height: 100px;
+
+     }
+     .color{
+       background:gray;
+     }
+    </style>
   </head>
   <body>
+    <div class="box">
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+     </div>
   </body>
-  <script src='./src/Dynamic programming.js'>
+  <script src='./src/leetcode/IslandPerimeter.js'>
   </script>
   <script>
-    document.write(climbStairs(5))
+    console.log(islandPerimeter([[1]]))
   </script>
 </html>
