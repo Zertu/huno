@@ -40,4 +40,4 @@ function drawpicture(arr?) {
     }
 }
 
-drawpicture([[1])
+drawpicture([[1]])

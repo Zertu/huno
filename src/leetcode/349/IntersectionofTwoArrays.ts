@@ -30,3 +30,6 @@ var intersection = function (nums1, nums2) {
     }
     return intersections
 };
+function dedupe(array) {
+    return Array.from(new Set(array));
+}
