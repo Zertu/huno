@@ -12,45 +12,48 @@
 var addStrings = function (num1, num2) {
     var arr1 = num1.split(''), arr2 = num2.split('');
     if (arr1.length > arr2.length) {
-        for (var i = 0; i < (arr1.length - arr2.length); i++) {
-            arr2.unshift(0);
+        for (var i = 0; i <= (arr1.length - arr2.length); i++) {
+            arr2.unshift('0');
         }
     }
     else if (arr1.length < arr2.length) {
-        for (var i = 0; i < (arr2.length - arr1.length); i++) {
-            arr1.unshift(0);
+        for (var i = 0; i <= (arr2.length - arr1.length); i++) {
+            arr1.unshift('0');
         }
     }
+    console.log(arr1);
     return add(arr1, arr2);
 };
 function add(arr1, arr2) {
-    var i = arr1.length, shouldplus = false, temparr = [], result;
-    while (i > 0) {
+    var i = arr1.length - 1, shouldplus = false, temparr = [], result;
+    while (i >= 0) {
         if (shouldplus) {
             result = arr1[i] - 0 + (arr2[i] - 0) + 1;
             if (result < 10) {
                 shouldplus = false;
-                temparr.push(result + '');
+                temparr.unshift(result + '');
             }
             else {
                 shouldplus = true;
                 if (i != 0) {
-                    temparr.push((result + '').charAt(1));
+                    temparr.unshift((result + '').charAt(1));
                 }
                 else {
-                    temparr.push(result + '');
+                    temparr.unshift(result + '');
                 }
             }
         }
         else {
             result = arr1[i] - 0 + (arr2[i] - 0);
+            console.log(arr1[i], arr2[i]);
+            console.log(result);
             if (result < 10) {
                 shouldplus = false;
-                temparr.push(result + '');
+                temparr.unshift(result + '');
             }
             else {
                 shouldplus = true;
-                temparr.push((result + '').charAt(1));
+                temparr.unshift((result + '').charAt(1));
             }
         }
         i--;
