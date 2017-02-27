@@ -12,16 +12,17 @@
 var addStrings = function (num1, num2) {
     var arr1 = num1.split(''), arr2 = num2.split('');
     if (arr1.length > arr2.length) {
-        for (var i = 0; i <= (arr1.length - arr2.length); i++) {
+        var temp = arr1.length - arr2.length;
+        for (var i = 0; i < temp; i++) {
             arr2.unshift('0');
         }
     }
     else if (arr1.length < arr2.length) {
-        for (var i = 0; i <= (arr2.length - arr1.length); i++) {
+        var temp = arr2.length - arr1.length;
+        for (var i = 0; i < temp; i++) {
             arr1.unshift('0');
         }
     }
-    console.log(arr1);
     return add(arr1, arr2);
 };
 function add(arr1, arr2) {
@@ -45,15 +46,18 @@ function add(arr1, arr2) {
         }
         else {
             result = arr1[i] - 0 + (arr2[i] - 0);
-            console.log(arr1[i], arr2[i]);
-            console.log(result);
             if (result < 10) {
                 shouldplus = false;
                 temparr.unshift(result + '');
             }
             else {
                 shouldplus = true;
-                temparr.unshift((result + '').charAt(1));
+                if (i != 0) {
+                    temparr.unshift((result + '').charAt(1));
+                }
+                else {
+                    temparr.unshift(result + '');
+                }
             }
         }
         i--;
