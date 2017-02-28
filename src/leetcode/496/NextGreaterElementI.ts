@@ -23,5 +23,21 @@
  * @return {number[]}
  */
 var nextGreaterElement = function(findNums, nums) {
-    
+    let result=[]
+
+    for(let i =0;i<findNums.length;i++){
+        result[i]=-1
+        nums.find((value,index)=>{
+            if(value==findNums[i]){
+                for(let j =index;j<nums.length;j++){
+                    if(nums[j]>value){
+                        result[i]=nums[j]
+                        break
+                    }
+                }
+            }
+        })
+    }
+    return result
 };
+

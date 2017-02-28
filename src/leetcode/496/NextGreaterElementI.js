@@ -19,4 +19,22 @@
  * @return {number[]}
  */
 var nextGreaterElement = function (findNums, nums) {
+    var result = [];
+    var _loop_1 = function (i) {
+        result[i] = -1;
+        nums.find(function (value, index) {
+            if (value == findNums[i]) {
+                for (var j = index; j < nums.length; j++) {
+                    if (nums[j] > value) {
+                        result[i] = nums[j];
+                        break;
+                    }
+                }
+            }
+        });
+    };
+    for (var i = 0; i < findNums.length; i++) {
+        _loop_1(i);
+    }
+    return result;
 };
